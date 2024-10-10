@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <!-- Howler.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <!--Load CSS-->
+    <link rel="stylesheet" href="frontend\style.css">
+    <!--Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>My Music Player</h1>
+
+        <!--search song-->
+        <div class="search-container" style="position: relative;">
+            <i class="bi bi-search" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);"></i>
+            <input type="text" id="searchBar" placeholder="Search" autocomplete="off" oninput="adjustDropdownWidth()" style="padding-left: 30px;" />
+        </div>
+    
+        <!-- Dropdown container for song list -->
+        <div id="songList"></div>
+        
+        <button id="playButton"><i class="bi bi-play"></i></button>
+        <button id="pauseButton"><i class="bi bi-pause"></i></button>
+        <button id="stopButton"><i class="bi bi-stop-fill"></i></button>
+        <div id="timestamp">00:00</div>
+
+        <script src="main\app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
