@@ -15,7 +15,7 @@ const songsDirectory =  'E:/osu!/Songs';
 app.use(cors());
 
 // Serve static files from the osu! songs directory on your SSD
-app.use('/songs', express.static(songsDirectory), serveIndex(songsDirectory, { 'icons': true }));
+app.use('/docs/songs', express.static(songsDirectory), serveIndex(songsDirectory, { 'icons': true }));
 
 // Endpoint to get song names in JSON format
 app.get('/api/songs', (req, res) => {
